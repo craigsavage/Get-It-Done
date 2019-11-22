@@ -8,17 +8,43 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class TaskList extends AppCompatActivity {
     public float touchStart;
     public float touchEnd;
+    TaskAdapter adapter;
+    ArrayList<TaskObject> tasks;
+    ListView taskList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_list);
         getSupportActionBar().hide();
+
+
+        tasks = new ArrayList<>();
+        TaskObject midterm = new TaskObject("Midterm", "Mobile App Dev", "11:00am", "November 29th", 0);
+        TaskObject party = new TaskObject("Party", "Social", "9:00pm", "November 30th", 1);
+        tasks.add(midterm);
+        tasks.add(party);
+
+//        ArrayList<String> titles = new ArrayList<>();
+        taskList = (ListView) findViewById(R.id.listView);
+//        titles.add("Midterm");
+//        titles.add("Assignment");
+//        titles.add("Party");
+
+        adapter = new TaskAdapter(this, tasks);
+        taskList.setAdapter(adapter);
     }
+
+
+
     @Override
     public boolean onTouchEvent(MotionEvent event){
 
