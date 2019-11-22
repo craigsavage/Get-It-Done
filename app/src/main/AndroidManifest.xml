@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".signUp"></activity>
         <activity android:name=".loginPage" />
+
+        <activity android:name=".TaskList"></activity>
+
         <activity android:name=".SplashScreen" />
         <activity android:name=".Calendar" />
         <activity android:name=".MainActivity">

@@ -9,14 +9,14 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class Calendar extends AppCompatActivity {
+public class TaskList extends AppCompatActivity {
     public float touchStart;
     public float touchEnd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calendar);
+        setContentView(R.layout.activity_task_list);
         getSupportActionBar().hide();
     }
     @Override
@@ -39,8 +39,8 @@ public class Calendar extends AppCompatActivity {
             case (MotionEvent.ACTION_UP) :
                 Log.d("Ryuji","Action was UP");
                 touchEnd = event.getY();
-                if(touchStart-touchEnd > 200){
-                    swipeUp();
+                if(touchStart-touchEnd < -200){
+                    swipeDown();
                 }
 //                String str2 = Float.toString(touchStart);
 //                Log.d("Ryuji",str2);
@@ -59,14 +59,14 @@ public class Calendar extends AppCompatActivity {
         }
     }
 
-    public void swipeUp(View v){
-        Intent intent = new Intent(this, TaskList.class);
+    public void goToCal(View v){
+        Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
-        overridePendingTransition (R.anim.up_slide_in, R.anim.up_slide_out);//Enter new, Exit old
+        overridePendingTransition (R.anim.down_slide_in, R.anim.down_slide_out);//Enter new, Exit old
     }
-    public void swipeUp(){
-        Intent intent = new Intent(this, TaskList.class);
+    public void swipeDown(){
+        Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
-        overridePendingTransition (R.anim.up_slide_in, R.anim.up_slide_out);//Enter new, Exit old
+        overridePendingTransition (R.anim.down_slide_in, R.anim.down_slide_out);//Enter new, Exit old
     }
 }
