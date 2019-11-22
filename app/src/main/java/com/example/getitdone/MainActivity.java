@@ -20,4 +20,14 @@ public class MainActivity extends AppCompatActivity {
         overridePendingTransition (R.anim.down_slide_in, R.anim.down_slide_in);
         startActivity(intent);
     }
+
+    public void splash(View v) {
+        Intent intent = new Intent(this, SplashScreen.class);
+        startActivity(intent);
+    }
+
+    public void profilePage(View v) {
+        Intent intent = new Intent(this, ProfilePage.class);
+        startActivity(intent);
+    }
 }
