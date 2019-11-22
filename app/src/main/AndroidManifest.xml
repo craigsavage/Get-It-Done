@@ -11,9 +11,13 @@
         android:theme="@style/AppTheme">
         <activity android:name=".ProfilePage"></activity>
         <activity android:name=".TaskList" />
-        <activity
-            android:name=".SplashScreen"
+        <activity android:name=".SplashScreen"
             android:screenOrientation="portrait" />
+        <activity android:name=".NewTask"></activity>
+
+        <activity android:name=".signUp"></activity>
+        <activity android:name=".loginPage" />
+        
         <activity android:name=".Calendar" />
         <activity android:name=".MainActivity">
             <intent-filter>
