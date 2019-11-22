@@ -20,4 +20,8 @@ public class MainActivity extends AppCompatActivity {
         overridePendingTransition (R.anim.down_slide_in, R.anim.down_slide_in);
         startActivity(intent);
     }
+    public void goToNewTask(View v){
+        Intent intent = new Intent(this, NewTask.class);
+        startActivity(intent);
+    }
 }
