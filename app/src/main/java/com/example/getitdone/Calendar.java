@@ -16,8 +16,8 @@ public class Calendar extends AppCompatActivity {
     }
 
     public void swipeUp(View v){
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, TaskList.class);
         startActivity(intent);
-        overridePendingTransition  (R.anim.up_slide_in, R.anim.up_slide_in);
+        overridePendingTransition (R.anim.up_slide_in, R.anim.up_slide_out);//Enter new, Exit old
     }
 }
