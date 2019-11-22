@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
     }
 
     public void goToCal(View v){
@@ -20,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         overridePendingTransition (R.anim.down_slide_in, R.anim.down_slide_in);
         startActivity(intent);
     }
-<<<<<<< HEAD
 
     public void splash(View v) {
         Intent intent = new Intent(this, SplashScreen.class);
@@ -29,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void profilePage(View v) {
         Intent intent = new Intent(this, ProfilePage.class);
-=======
+        startActivity(intent);
+    }
     public void goToNewTask(View v){
         Intent intent = new Intent(this, NewTask.class);
->>>>>>> daf69f62d132a6ea7f8a7a816d8d283baf472764
         startActivity(intent);
     }
 }
