@@ -18,5 +18,6 @@ public class MainActivity extends AppCompatActivity {
     public void goToCal(View v){
         Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
+        overridePendingTransition  (R.anim.up_slide_out, R.anim.up_slide_out);
     }
 }
