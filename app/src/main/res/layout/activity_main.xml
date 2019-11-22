@@ -9,13 +9,15 @@
         android:id="@+id/button8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:text="Login"
+        android:onClick="goToLogin"/>
 
     <Button
         android:id="@+id/button7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Signup" />
+        android:text="Signup"
+        android:onClick="goToSignup"/>
 
     <Button
         android:id="@+id/button5"
