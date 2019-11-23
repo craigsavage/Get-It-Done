@@ -1,6 +1,15 @@
 <resources>
     <string name="app_name">Get It Done</string>
     <string name="get_it_done">Get It Done</string>
+    <string name="stepwise_task">Stepwise Task</string>
+    <string name="a_framework_for_tasks_that_may_benefit_from_being_partitioned_into_discrete_steps_until_completion">A framework for tasks that may benefit from being partitioned into discrete steps until completion.</string>
+    <string name="repeat_task">Repeat Task</string>
+    <string name="a_framework_for_tasks_that_may_have_sub_tasks_requiring_loose_repetition_such_as_studying_for_an_indeterminate_amount_of_time">A framework for tasks that may have sub-tasks requiring loose repetition, such as studying for an indeterminate amount of time.</string>
+    <string name="complex_task">Complex Task</string>
+    <string name="a_framework_for_tasks_with_a_large_amount_of_nested_sub_tasks_each_with_their_own_complex_and_flexible_workflow">A framework for tasks with a large amount of nested sub-tasks, each with their own complex and flexible workflow.</string>
+    <string name="favorites_dropdown_button">favorites dropdown button</string>
+    <string name="stepwise_task_structure">Stepwise task structure</string>
+    <string name="repeat_task_structure">Repeat task structure</string>
     <string-array name="sortBy">
         <item name="sortDate">Date</item>
         <item name="sortName">Name</item>
