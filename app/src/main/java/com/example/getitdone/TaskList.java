@@ -27,10 +27,14 @@ public class TaskList extends AppCompatActivity {
 
 
         tasks = new ArrayList<>();
-        TaskObject midterm = new TaskObject("Midterm", "Mobile App Dev", "11:00am", "November 29th", 0);
-        TaskObject party = new TaskObject("Party", "Social", "9:00pm", "November 30th", 1);
-        tasks.add(midterm);
-        tasks.add(party);
+        TaskObject task1 = new TaskObject("Midterm", "Mobile App Dev", "11:00am", "November 29th", 0);
+        TaskObject task2 = new TaskObject("Party", "Social", "9:00pm", "November 30th", 1);
+        TaskObject task3 = new TaskObject("Assignment 2", "Embedded Systems", "11:59pm", "November 23th", 2);
+        TaskObject task4 = new TaskObject("Project part 3a", "User Interfaces", "11:59pm", "November 24th", 3);
+        tasks.add(task1);
+        tasks.add(task2);
+        tasks.add(task3);
+        tasks.add(task4);
 
 //        ArrayList<String> titles = new ArrayList<>();
         taskList = (ListView) findViewById(R.id.listView);
