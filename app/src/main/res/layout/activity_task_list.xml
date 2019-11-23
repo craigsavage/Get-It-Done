@@ -9,20 +9,22 @@
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="81dp"
-        android:layout_height="82dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/transparent"
+        android:onClick="goToTemplates"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:onClick="goToTemplates"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="500dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="80dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -54,6 +54,4 @@ public class TaskAdapter extends ArrayAdapter<TaskObject> {
 
         return convertView;
     }
-
-
 }

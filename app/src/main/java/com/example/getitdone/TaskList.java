@@ -60,8 +60,6 @@ public class TaskList extends AppCompatActivity {
         });
     }
 
-
-
     @Override
     public boolean onTouchEvent(MotionEvent event){
 
