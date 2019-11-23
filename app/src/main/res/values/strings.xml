@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Get It Done</string>
     <string name="get_it_done">Get It Done</string>
+    <string-array name="sortBy">
+        <item name="sortDate">Date</item>
+        <item name="sortName">Name</item>
+        <item name="sortCata">Category</item>
+    </string-array>
 </resources>

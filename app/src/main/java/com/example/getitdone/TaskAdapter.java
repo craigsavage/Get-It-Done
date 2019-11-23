@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -34,6 +35,7 @@ public class TaskAdapter extends ArrayAdapter<TaskObject> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.task_tile, parent, false);
         }
         TextView taskName = convertView.findViewById(R.id.title);
+        ImageView importance = convertView.findViewById(R.id.imageView6);
         taskName.setText(task.getName());//////////////
         TextView category = convertView.findViewById(R.id.category);
         String peopleAttending = "";
@@ -43,6 +45,12 @@ public class TaskAdapter extends ArrayAdapter<TaskObject> {
         String date = task.getDate();
         String time = task.getTime();
         datetime.setText(date + " @ " + time);
+        if(task.getImportance() == 3){
+            importance .setVisibility(View.VISIBLE);
+        }
+        else{
+            importance .setVisibility(View.GONE);
+        }
 
         return convertView;
     }

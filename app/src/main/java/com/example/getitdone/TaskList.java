@@ -8,42 +8,56 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import java.util.ArrayList;
 
 public class TaskList extends AppCompatActivity {
     public float touchStart;
     public float touchEnd;
-    TaskAdapter adapter;
+    TaskAdapter adapterT;
     ArrayList<TaskObject> tasks;
     ListView taskList;
+    String sortBy;
+
+    TaskObject task1 = new TaskObject("Midterm", "Mobile App Dev", "11:00am", "November 29th", 3, 0);
+    TaskObject task2 = new TaskObject("Party", "Social", "9:00pm", "November 30th", 1, 1);
+    TaskObject task3 = new TaskObject("Assignment 2", "Embedded Systems", "11:59pm", "November 23th", 2, 2);
+    TaskObject task4 = new TaskObject("Project part 3a", "User Interfaces", "11:59pm", "November 24th", 3, 3);
+    TaskObject task5 = new TaskObject("App Presentation", "Mobile App Dev", "2:00pm", "December 2nd", 2, 4);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_list);
 
-
-        tasks = new ArrayList<>();
-        TaskObject task1 = new TaskObject("Midterm", "Mobile App Dev", "11:00am", "November 29th", 0);
-        TaskObject task2 = new TaskObject("Party", "Social", "9:00pm", "November 30th", 1);
-        TaskObject task3 = new TaskObject("Assignment 2", "Embedded Systems", "11:59pm", "November 23th", 2);
-        TaskObject task4 = new TaskObject("Project part 3a", "User Interfaces", "11:59pm", "November 24th", 3);
-        tasks.add(task1);
-        tasks.add(task2);
-        tasks.add(task3);
-        tasks.add(task4);
-
-//        ArrayList<String> titles = new ArrayList<>();
         taskList = (ListView) findViewById(R.id.listView);
-//        titles.add("Midterm");
-//        titles.add("Assignment");
-//        titles.add("Party");
 
-        adapter = new TaskAdapter(this, tasks);
-        taskList.setAdapter(adapter);
+        //Initialize spinner and spinner adapter for the list view
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.sortBy, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        //Add a listener so that every time a topping is selected it is set as the "current topping"
+        //This will be used later in "submit" function to add to the total price
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int pos, long id) {
+                String mSelected = (String) parent.getItemAtPosition(pos);
+                sortBy = mSelected;
+                chooseSort(sortBy, taskList);
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+                // TODO Auto-generated method stub
+                sortBy = "Date";
+            }
+        });
     }
 
 
@@ -69,7 +83,7 @@ public class TaskList extends AppCompatActivity {
                 Log.d("Ryuji","Action was UP");
                 touchEnd = event.getY();
                 if(touchStart-touchEnd < -200){
-                    swipeDown();
+                    goToCal();
                 }
 //                String str2 = Float.toString(touchStart);
 //                Log.d("Ryuji",str2);
@@ -88,14 +102,68 @@ public class TaskList extends AppCompatActivity {
         }
     }
 
-    public void goToCal(View v){
+    public void goToCal(){
         Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
         overridePendingTransition (R.anim.down_slide_in, R.anim.down_slide_out);//Enter new, Exit old
     }
-    public void swipeDown(){
-        Intent intent = new Intent(this, Calendar.class);
+    public void goToTemplates(View v){
+        Intent intent = new Intent(this, NewTask.class);
         startActivity(intent);
-        overridePendingTransition (R.anim.down_slide_in, R.anim.down_slide_out);//Enter new, Exit old
+        overridePendingTransition (R.anim.right_slide_in, R.anim.right_slide_out);//Enter new, Exit old
+    }
+
+    public void chooseSort(String sorter, ListView list){
+        switch(sorter){
+            case "Name":
+                sortByName(list);
+                break;
+            case "Category":
+                sortByCategory(list);
+                break;
+            case "Date":
+                sortByDate(list);
+                break;
+            default:
+                break;
+        }
+    }
+    public void sortByName(ListView list){
+        tasks = new ArrayList<>();
+
+        tasks.add(task5);
+        tasks.add(task3);
+        tasks.add(task1);
+        tasks.add(task2);
+        tasks.add(task4);
+
+        adapterT = new TaskAdapter(this, tasks);
+        list.setAdapter(adapterT);
+    }
+
+    public void sortByDate(ListView list){
+        tasks = new ArrayList<>();
+
+        tasks.add(task3);
+        tasks.add(task4);
+        tasks.add(task1);
+        tasks.add(task2);
+        tasks.add(task5);
+
+        adapterT = new TaskAdapter(this, tasks);
+        list.setAdapter(adapterT);
+    }
+
+    public void sortByCategory(ListView list){
+        tasks = new ArrayList<>();
+
+        tasks.add(task3);
+        tasks.add(task1);
+        tasks.add(task5);
+        tasks.add(task2);
+        tasks.add(task4);
+
+        adapterT = new TaskAdapter(this, tasks);
+        list.setAdapter(adapterT);
     }
 }

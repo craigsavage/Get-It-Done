@@ -9,13 +9,15 @@ public class TaskObject implements Serializable {
     String category;
     String time;
     String date;
+    int importance;
     int id;
 
-    public TaskObject(String name, String category, String time, String date, int id) {
+    public TaskObject(String name, String category, String time, String date, int importance, int id) {
         this.name = name;
         this.category = category;
         this.time = time;
         this.date = date;
+        this.importance = importance;
         this.id = id;
     }
 
@@ -66,5 +68,13 @@ public class TaskObject implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getImportance() {
+        return importance;
+    }
+
+    public void setImportance(int importance) {
+        this.importance = importance;
     }
 }
