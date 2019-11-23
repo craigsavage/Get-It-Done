@@ -229,7 +229,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:contentDescription="Complex task structure"
+                    android:contentDescription="@string/complex_task_structure"
                     app:srcCompat="@drawable/complex_task_structure" />
 
             </LinearLayout>
