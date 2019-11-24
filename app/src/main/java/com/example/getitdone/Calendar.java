@@ -58,6 +58,11 @@ public class Calendar extends AppCompatActivity {
         }
     }
 
+    public void calendar(View v) {
+        Intent intent = new Intent(Calendar.this, ProfilePage.class);
+        startActivity(intent);
+    }
+
     public void swipeUp(View v){
         Intent intent = new Intent(this, TaskList.class);
         startActivity(intent);

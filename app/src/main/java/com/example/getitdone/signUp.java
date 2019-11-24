@@ -15,5 +15,6 @@ public class signUp extends AppCompatActivity {
     }
     public void submit(View v){
         Intent intent = new Intent(signUp.this, loginPage.class);
+        startActivity(intent);
     }
 }

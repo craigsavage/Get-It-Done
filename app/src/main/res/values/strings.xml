@@ -18,6 +18,14 @@
     <string name="enter_your_name">Enter your name</string>
     <string name="sign_up">Sign Up</string>
     <string name="default_profile_image">Default profile image</string>
+    <string name="tomato_craig_s_profile_picture">Tomato Craig\'s profile picture</string>
+    <string name="craig_savage">Craig Savage</string>
+    <string name="tomato_craig_username">\@tomatocraig</string>
+    <string name="default_password">********</string>
+    <string name="tomato_craig_g_mail_com">tomatocraig@gmail.com</string>
+    <string name="swipe_up">Swipe up</string>
+    <string name="calendar">Calendar</string>
+    <string name="submit">Submit</string>
     <string-array name="sortBy">
         <item name="sortDate">Date</item>
         <item name="sortName">Name</item>

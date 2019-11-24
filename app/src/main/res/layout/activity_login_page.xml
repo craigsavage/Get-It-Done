@@ -94,7 +94,7 @@
             android:onClick="login" />
 
         <Button
-            android:id="@+id/btnSignup"
+            android:id="@+id/btnSignUp"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
