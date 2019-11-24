@@ -48,26 +48,48 @@
 
     <ImageView
         android:id="@+id/ivCalendar"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="283dp"
+        android:layout_height="286dp"
+        android:layout_marginTop="24dp"
         android:contentDescription="@string/calendar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView8"
-        app:srcCompat="@drawable/calendar" />
+        app:srcCompat="@drawable/november" />
+
+    <Button
+        android:id="@+id/rightCal"
+        android:layout_width="45dp"
+        android:layout_height="292dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/ourOrange"
+        android:onClick="rightCal"
+        android:text="&gt;&gt;"
+        app:layout_constraintStart_toEndOf="@+id/ivCalendar"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <Button
+        android:id="@+id/leftCal"
+        android:layout_width="45dp"
+        android:layout_height="292dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/ourOrange"
+        android:onClick="leftCal"
+        android:text="&lt;&lt;"
+        app:layout_constraintEnd_toStartOf="@+id/ivCalendar"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
     <ImageView
         android:id="@+id/ivSwipeUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:clickable="true"
         android:contentDescription="@string/swipe_up"
         android:onClick="swipeUp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivCalendar"
         app:srcCompat="@drawable/swipe_up" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

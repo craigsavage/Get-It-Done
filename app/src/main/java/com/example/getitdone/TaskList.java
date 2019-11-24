@@ -23,11 +23,15 @@ public class TaskList extends AppCompatActivity {
     ListView taskList;
     String sortBy;
 
-    TaskObject task1 = new TaskObject("Midterm", "Mobile App Dev", "11:00am", "November 29th", 3, 0);
-    TaskObject task2 = new TaskObject("Party", "Social", "9:00pm", "November 30th", 1, 1);
-    TaskObject task3 = new TaskObject("Assignment 2", "Embedded Systems", "11:59pm", "November 23th", 2, 2);
-    TaskObject task4 = new TaskObject("Project part 3a", "User Interfaces", "11:59pm", "November 24th", 3, 3);
-    TaskObject task5 = new TaskObject("App Presentation", "Mobile App Dev", "2:00pm", "December 2nd", 2, 4);
+    TaskObject task1 = new TaskObject("Midterm", "Mobile App Dev", "11:00am", "November 27th", 3, 0);
+    TaskObject task2 = new TaskObject("Party", "Social", "9:00pm", "November 26th", 1, 1);
+    TaskObject task3 = new TaskObject("Assignment 2", "Embedded Systems", "11:59pm", "November 24th", 2, 2);
+    TaskObject task4 = new TaskObject("Project part 3a", "User Interfaces", "11:59pm", "November 25th", 3, 3);
+    TaskObject task5 = new TaskObject("App Presentation", "Mobile App Dev", "2:00pm", "November 28th", 2, 4);
+    TaskObject task6 = new TaskObject("Midterm", "Distributed Systems", "1:00pm", "November 27th", 3, 5);
+    TaskObject task7 = new TaskObject("Visit Parents", "Social", "4:00pm", "November 26th", 1, 6);
+    TaskObject task8 = new TaskObject("Study Session", "Social", "9:00am", "November 26th", 1, 7);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,9 +135,12 @@ public class TaskList extends AppCompatActivity {
 
         tasks.add(task5);
         tasks.add(task3);
+        tasks.add(task6);
         tasks.add(task1);
         tasks.add(task2);
         tasks.add(task4);
+        tasks.add(task8);
+        tasks.add(task7);
 
         adapterT = new TaskAdapter(this, tasks);
         list.setAdapter(adapterT);
@@ -145,7 +152,10 @@ public class TaskList extends AppCompatActivity {
         tasks.add(task3);
         tasks.add(task4);
         tasks.add(task1);
+        tasks.add(task6);
         tasks.add(task2);
+        tasks.add(task8);
+        tasks.add(task7);
         tasks.add(task5);
 
         adapterT = new TaskAdapter(this, tasks);
@@ -159,6 +169,8 @@ public class TaskList extends AppCompatActivity {
         tasks.add(task1);
         tasks.add(task5);
         tasks.add(task2);
+        tasks.add(task7);
+        tasks.add(task8);
         tasks.add(task4);
 
         adapterT = new TaskAdapter(this, tasks);

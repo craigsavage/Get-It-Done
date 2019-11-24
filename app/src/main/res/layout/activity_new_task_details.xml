@@ -101,8 +101,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/taskgraph0" />
-
+        app:srcCompat="@drawable/taskgraph0"/>
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
@@ -110,7 +109,6 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="316dp"
         android:text="Stepwise Task"
-
         android:textColor="@color/colorBlack"
         android:textSize="20sp"
         android:textStyle="bold"

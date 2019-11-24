@@ -8,15 +8,18 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageView;
 
 public class Calendar extends AppCompatActivity {
     public float touchStart;
     public float touchEnd;
+    ImageView calendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
+        calendar = (ImageView)findViewById((R.id.ivCalendar));
     }
     @Override
     public boolean onTouchEvent(MotionEvent event){
@@ -72,5 +75,22 @@ public class Calendar extends AppCompatActivity {
         Intent intent = new Intent(this, TaskList.class);
         startActivity(intent);
         overridePendingTransition (R.anim.up_slide_in, R.anim.up_slide_out);//Enter new, Exit old
+    }
+
+    public void rightCal(View v){
+        if(calendar.getDrawable().getConstantState() == getResources().getDrawable( R.drawable.november).getConstantState()) {
+            calendar.setImageResource(R.drawable.december);
+        }
+        else if(calendar.getDrawable().getConstantState() == getResources().getDrawable( R.drawable.october).getConstantState()) {
+            calendar.setImageResource(R.drawable.november);
+        }
+    }
+    public void leftCal(View v){
+        if(calendar.getDrawable().getConstantState() == getResources().getDrawable( R.drawable.december).getConstantState()) {
+            calendar.setImageResource(R.drawable.november);
+        }
+        else if(calendar.getDrawable().getConstantState() == getResources().getDrawable( R.drawable.november).getConstantState()) {
+            calendar.setImageResource(R.drawable.october);
+        }
     }
 }
