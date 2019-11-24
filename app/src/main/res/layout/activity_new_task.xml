@@ -65,6 +65,7 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/box_borders"
                 android:clickable="true"
+                android:onClick="goToTaskDetails"
                 android:orientation="horizontal"
                 android:padding="10dp">
 
@@ -236,5 +237,18 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="Back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/ourOrange"
+        android:onClick="goToTaskList"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

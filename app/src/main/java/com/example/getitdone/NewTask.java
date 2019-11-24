@@ -14,8 +14,13 @@ public class NewTask extends AppCompatActivity {
         setContentView(R.layout.activity_new_task);
     }
     public void goToTaskList(View v){
-        Intent intent = new Intent(this, NewTask.class);
+        Intent intent = new Intent(this, TaskList.class);
         startActivity(intent);
         overridePendingTransition (R.anim.left_slide_in, R.anim.left_slide_out);//Enter new, Exit old
+    }
+    public void goToTaskDetails(View v){
+        Intent intent = new Intent(this, NewTaskDetails.class);
+        startActivity(intent);
+        overridePendingTransition (R.anim.right_slide_in, R.anim.right_slide_out);//Enter new, Exit old
     }
 }
