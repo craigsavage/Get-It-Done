@@ -37,6 +37,8 @@
     <string name="enter_new_password">Enter new password</string>
     <string name="confirm_new_password">Confirm new password</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="profile">Profile</string>
+    <string name="click_to_edit_profile">Click to edit profile</string>
     <string-array name="sortBy">
         <item name="sortDate">Date</item>
         <item name="sortName">Name</item>

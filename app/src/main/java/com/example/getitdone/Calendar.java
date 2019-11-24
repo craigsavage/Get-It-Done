@@ -61,7 +61,7 @@ public class Calendar extends AppCompatActivity {
         }
     }
 
-    public void calendar(View v) {
+    public void openProfile(View v) {
         Intent intent = new Intent(Calendar.this, ProfilePage.class);
         startActivity(intent);
     }
