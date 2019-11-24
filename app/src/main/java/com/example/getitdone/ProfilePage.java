@@ -14,6 +14,12 @@ public class ProfilePage extends AppCompatActivity {
         setContentView(R.layout.activity_profile_page);
     }
 
+    public void editProfile(View v) {
+        Intent intent = new Intent(ProfilePage.this, ProfileSettings.class);
+        startActivity(intent);
+        finish();
+    }
+
     public void saveProfile(View v) {
         Intent intent = new Intent(ProfilePage.this, Calendar.class);
         startActivity(intent);
