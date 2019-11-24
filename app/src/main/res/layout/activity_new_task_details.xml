@@ -100,8 +100,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/taskgraph0"
-        android:onClick="imageGraphSwap"/>
+        app:srcCompat="@drawable/taskgraph1"
+        android:onClick="swa"/>
 
     <TextView
         android:id="@+id/textView12"
