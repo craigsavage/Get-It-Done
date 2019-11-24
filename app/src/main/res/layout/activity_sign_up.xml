@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView514"
-        app:srcCompat="@drawable/user_account_icon_82574" />
+        app:srcCompat="@drawable/new_profile_picture" />
 
     <ImageView
         android:id="@+id/ivAddImageArrow"
