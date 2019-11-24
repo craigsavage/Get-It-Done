@@ -92,4 +92,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/swipe_up" />
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="390dp"
+        android:layout_height="34dp"
+        app:layout_constraintEnd_toEndOf="@+id/rightCal"
+        app:layout_constraintStart_toStartOf="@+id/leftCal"
+        app:layout_constraintTop_toBottomOf="@+id/ivCalendar"
+        app:srcCompat="@drawable/legend" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
