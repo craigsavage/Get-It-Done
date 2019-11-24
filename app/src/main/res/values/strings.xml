@@ -10,6 +10,7 @@
     <string name="favorites_dropdown_button">favorites dropdown button</string>
     <string name="stepwise_task_structure">Stepwise task structure</string>
     <string name="repeat_task_structure">Repeat task structure</string>
+    <string name="complex_task_structure">Complex task structure</string>
     <string-array name="sortBy">
         <item name="sortDate">Date</item>
         <item name="sortName">Name</item>
