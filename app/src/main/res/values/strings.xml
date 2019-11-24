@@ -26,7 +26,6 @@
     <string name="swipe_up">Swipe up</string>
     <string name="calendar">Calendar</string>
     <string name="submit">Submit</string>
-    <string name="sign_up">Sign Up</string>
     <string name="login">LogIn</string>
     <string-array name="sortBy">
         <item name="sortDate">Date</item>
