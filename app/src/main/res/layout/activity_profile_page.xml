@@ -26,7 +26,7 @@
 
             <ImageView
                 android:id="@+id/ivProfileTomatoCraig"
-                android:layout_width="0dp"
+                android:layout_width="25dp"
                 android:layout_height="60dp"
                 android:layout_weight="1"
                 android:contentDescription="@string/tomato_craig_s_profile_picture"
@@ -61,7 +61,7 @@
 
             <Button
                 android:id="@+id/btnEditProfile"
-                android:layout_width="0dp"
+                android:layout_width="25dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:backgroundTint="@color/ourOrange"

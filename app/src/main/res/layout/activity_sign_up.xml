@@ -25,7 +25,9 @@
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_marginTop="50dp"
+        android:clickable="true"
         android:contentDescription="@string/default_profile_image"
+        android:onClick="getProfilePic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView514"
@@ -43,7 +45,7 @@
 
     <TextView
         android:id="@+id/textView516"
-        android:layout_width="90dp"
+        android:layout_width="85dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="218dp"
         android:gravity="center_horizontal|center_vertical"
@@ -59,7 +61,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="50dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,6 +97,20 @@
             android:textSize="21sp" />
 
         <EditText
+            android:id="@+id/etSignUpEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:fontFamily="sans-serif"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="21sp" />
+
+        <EditText
             android:id="@+id/etSignUpPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -112,10 +128,9 @@
             android:id="@+id/etSignUpPasswordConfirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
             android:backgroundTint="@color/colorPrimary"
             android:fontFamily="sans-serif"
-            android:hint="Confirm Password"
+            android:hint="@string/confirm_password"
             android:inputType="textPassword"
             android:padding="5dp"
             android:textColor="@color/colorPrimary"
@@ -123,18 +138,6 @@
             android:textSize="21sp" />
 
 
-        <EditText
-            android:id="@+id/etSignUpEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
-            android:fontFamily="sans-serif"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress"
-            android:padding="5dp"
-            android:textColor="@color/colorPrimary"
-            android:textColorHint="@color/colorPrimary"
-            android:textSize="21sp" />
     </LinearLayout>
 
     <Button
