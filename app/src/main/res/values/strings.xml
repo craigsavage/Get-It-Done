@@ -29,6 +29,13 @@
     <string name="login">LogIn</string>
     <string name="save">Save</string>
     <string name="edit_profile">Edit Profile</string>
+    <string name="click_to_change">Click to change</string>
+    <string name="click_to_add_image">Click to add Image</string>
+    <string name="enter_new_name">Enter new Name</string>
+    <string name="enter_new_username">Enter new Username</string>
+    <string name="enter_new_email">Enter new Email</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="confirm_new_password">Confirm new password</string>
     <string-array name="sortBy">
         <item name="sortDate">Date</item>
         <item name="sortName">Name</item>
