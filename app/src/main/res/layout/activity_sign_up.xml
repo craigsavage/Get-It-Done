@@ -33,29 +33,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView514"
         app:srcCompat="@drawable/new_profile_picture" />
 
-    <ImageView
-        android:id="@+id/ivAddImageArrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="239dp"
-        app:layout_constraintStart_toEndOf="@+id/ivSignUpProfilePic"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/left_arrow" />
-
-    <TextView
-        android:id="@+id/textView516"
-        android:layout_width="85dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="218dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/click_to_add_image"
-        android:textAllCaps="true"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/ivAddImageArrow"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="0dp"
