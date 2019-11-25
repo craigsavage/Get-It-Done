@@ -9,22 +9,24 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileSettings"></activity>
+        <activity android:name=".TaskDetails"></activity>
+        <activity android:name=".ProfileSettings" />
         <activity android:name=".NewTaskDetails" />
         <activity android:name=".ProfileMetric" />
         <activity android:name=".TaskList" />
         <activity
             android:name=".SplashScreen"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".NewTask" />
         <activity android:name=".signUp" />
         <activity android:name=".LoginPage" />
         <activity android:name=".Calendar" />
     </application>
+
 </manifest>

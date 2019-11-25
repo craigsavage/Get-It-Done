@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TaskList extends AppCompatActivity {
     public float touchStart;
@@ -143,7 +144,7 @@ public class TaskList extends AppCompatActivity {
         tasks.add(task7);
 
         adapterT = new TaskAdapter(this, tasks);
-        list.setAdapter(adapterT);
+        setThisAdapter(list, adapterT);
     }
 
     public void sortByDate(ListView list){
@@ -159,7 +160,7 @@ public class TaskList extends AppCompatActivity {
         tasks.add(task5);
 
         adapterT = new TaskAdapter(this, tasks);
-        list.setAdapter(adapterT);
+        setThisAdapter(list, adapterT);
     }
 
     public void sortByCategory(ListView list){
@@ -174,6 +175,21 @@ public class TaskList extends AppCompatActivity {
         tasks.add(task4);
 
         adapterT = new TaskAdapter(this, tasks);
-        list.setAdapter(adapterT);
+        setThisAdapter(list, adapterT);
     }
+
+    public void setThisAdapter(ListView list, TaskAdapter adapter){
+        list.setAdapter(adapterT);
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                TaskObject curTask = (TaskObject) parent.getItemAtPosition(position);
+                String name = (String) curTask.getName();
+                Intent intent = new Intent(getApplicationContext(), TaskDetails.class);
+                intent.putExtra("name", name);
+                startActivity(intent);
+            }
+        });
+    }
+
 }

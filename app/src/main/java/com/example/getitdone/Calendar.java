@@ -78,18 +78,18 @@ public class Calendar extends AppCompatActivity {
     }
 
     public void rightCal(View v){
-        if(calendar.getDrawable().getConstantState() == getResources().getDrawable( R.drawable.november).getConstantState()) {
+        if(calendar.getDrawable().getConstantState() == getResources().getDrawable( R.drawable.nov_calendar).getConstantState()) {
             calendar.setImageResource(R.drawable.december);
         }
         else if(calendar.getDrawable().getConstantState() == getResources().getDrawable( R.drawable.october).getConstantState()) {
-            calendar.setImageResource(R.drawable.november);
+            calendar.setImageResource(R.drawable.nov_calendar);
         }
     }
     public void leftCal(View v){
         if(calendar.getDrawable().getConstantState() == getResources().getDrawable( R.drawable.december).getConstantState()) {
-            calendar.setImageResource(R.drawable.november);
+            calendar.setImageResource(R.drawable.nov_calendar);
         }
-        else if(calendar.getDrawable().getConstantState() == getResources().getDrawable( R.drawable.november).getConstantState()) {
+        else if(calendar.getDrawable().getConstantState() == getResources().getDrawable( R.drawable.nov_calendar).getConstantState()) {
             calendar.setImageResource(R.drawable.october);
         }
     }
