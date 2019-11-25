@@ -15,16 +15,16 @@
         <activity android:name=".TaskList" />
         <activity
             android:name=".SplashScreen"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" >
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".NewTask" />
         <activity android:name=".signUp" />
-        <activity android:name=".LoginPage" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".LoginPage" />
         <activity android:name=".Calendar" />
     </application>
 </manifest>
