@@ -54,7 +54,7 @@ public class ProfileSettings extends AppCompatActivity {
     }
 
     public void saveProfileInfo(View v) {
-        Intent intent = new Intent(ProfileSettings.this, ProfilePage.class);
+        Intent intent = new Intent(ProfileSettings.this, ProfileMetric.class);
         startActivity(intent);
         finish();
     }

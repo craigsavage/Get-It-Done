@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class ProfilePage extends AppCompatActivity {
+public class ProfileMetric extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,13 +15,13 @@ public class ProfilePage extends AppCompatActivity {
     }
 
     public void editProfile(View v) {
-        Intent intent = new Intent(ProfilePage.this, ProfileSettings.class);
+        Intent intent = new Intent(ProfileMetric.this, ProfileSettings.class);
         startActivity(intent);
         finish();
     }
 
     public void saveProfile(View v) {
-        Intent intent = new Intent(ProfilePage.this, Calendar.class);
+        Intent intent = new Intent(ProfileMetric.this, Calendar.class);
         startActivity(intent);
         finish();
     }

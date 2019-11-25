@@ -22,7 +22,7 @@ public class SplashScreen extends AppCompatActivity {
         Animation animation = AnimationUtils.loadAnimation(SplashScreen.this, R.anim.transitions);
         ivGetItDoneLogo.startAnimation(animation);
 
-        final Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+        final Intent intent = new Intent(SplashScreen.this, LoginPage.class);
         Thread timer = new Thread() {
             public void run() {
                 try {
